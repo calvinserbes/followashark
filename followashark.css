@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap'); /*import via googlefont, pour avoir acces a la police*/
+
+body{			/*margin et pardding 0 servent a retiré les marge appliqué par défaut a l'ensemble de ma balise "body"*/
+	padding: 0;
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+}
+header{
+	height: 80vh;
+	background-image: url("images/hdshark.jpg");			/*si possible, écrire le code css sans le mélanger, dans l'exacte même sens de haut en bas que dans notre code html5*/
+	background-position: center;					/*pour dire que l'image de fond doit être centrer*/
+	color: #fff;							/*couleur du texte de l'ensemble du header, pouvant être modifié par la suite en précisant*/
+	text-align: center;
+	background-repeat: no-repeat;
+}
+
+header nav{								/*spécifié header nav au lieu de juste nav, pour être plus précis, cela evitera par exemple de changer toutes les nav, s'il y'en a plusieurs*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;		 /* justify-content est une propriété de displayflex (flexbox)*/
+	padding: 20px;
+	font-size: 18px;
+}
+
+header nav a{
+	color: #fff;
+	text-decoration: none;  /*pour retiré le souligné par defauts des texte liens*/
+	margin-right: 15px;
+	font-weight: bold;
+	transition: .5s;
+}
+
+
+header nav a:hover{			/*sert a animé le bouton quand la souris passe au-dessus (ici il deviens lila)*/
+	color: #7326ef;   						/*c'est un violet/lila*/
+	border-bottom: 1px solid #7326ef;
+}
+
+header .principale{
+	margin-top: 50px;
+}
+
+header .principale h1{		/*toujours spécifié exactement le bon emplacement; exemple pour le h1 ici "header .principale h1" précisé au lieu de simplement "h1"*/
+	font-size: 50px;
+}
+
+header .principale h4{
+	font-size: 25px;
+	padding: 25px;
+	margin-top: -1px;
+}
+
+header .principale h3{
+	font-size: 15px;
+	display: flex;
+	width: 226px;
+	margin: auto;
+	margin-top: -35px;
+}
+
+header .principale p{
+	max-width: 450px;
+	max-height: 200px;		/*tous ça pour reussir a foutre de putain de texte en bas au milieu de mon bloc header*/
+	display: flex;
+	margin: auto;
+	margin-top: 60px;
+}
+							/*fin de la partie hearder*/
+.premieres-presentations{					/*deuxième partie de notre page*/
+	background-color: #3f364c;
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.premieres-presentations .gauche{
+	width: 60%;
+	margin-right: 200px;
+	font-size: 18px;
+}
+
+@media screen and (max-width: 810px){
+	.premieres-presentations .gauche		/*@media screen sert a modifié certaine dimensions a partir d'un certains pixel (ici 810px) dimension environnent tablette et smartphone*/
+	width: 100%;
+}
+
+.premieres-presentations .droite{
+	display: block;
+	margin-left: auto;					
+	margin-right: auto;						/*fin de la deuxième partie de notre page*/
+}
+
+.resume{
+	background-image: url("images/blackwhiteocean.jpg");		/*début deuxieme section et troisième partit de notre page*/
+	background-position: center;
+	color: #fff;
+	padding: 20px;
+	font-size: 18px;
+}
+.resume h1{
+	text-align: center;
+	font-size: 38px;
+	padding-bottom: 18px;
+
+}
+.resume p{
+	text-align: center;											/*fin deuxieme section et troisième partit de notre page*/
+}
+
+.agir{									/*début de la troisième section et quatrième partit de notre page*/
+	background-color: #6441ae;			/*background-color ici pour donner la couleur de fond a notre block "agir"*/
+	color: #fff;						/*color juste en dessous cible les textes*/
+	padding: 20px;						/*padding (marge exterieur) de 20pixel comme sur le reste de notre site, au niveau des bord extérieurs ducoup*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+.conscient{
+	width: 270px;
+	font-size: 18px;
+}
+
+.vigilant{
+	width: 270px;
+	font-size: 18px;
+}
+
+.acteur{
+	width: 270px;
+	font-size: 18px;					/*fin de la troisième section et quatrième partit de notre page*/	
+}
+
+footer{
+	background-image: url("images/blackwhiteocean.jpg");
+	background-position: center;
+	padding: 20px;
+	color: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+footer .social-media{
+	display: flex;
+}
+
+footer .social-media p{
+	margin-right: 15px;
+	border: 1px solid;
+	border-radius: 50%;
+	padding: 5px;
+	text-align: center;
+	width: 20px;
+	cursor: pointer;
+	transition: .5s;
+}
+
+footer .social-media p:hover{
+	color: #7326ef;
+}
+
+
+
+
+
+
+
